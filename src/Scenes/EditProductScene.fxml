@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Scenes.EditProductController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.EditProductController">
+    <children>
+        <Label layoutX="221.0" layoutY="29.0" prefHeight="27.0" prefWidth="160.0" text="Edit Product">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="productId" layoutX="330.0" layoutY="91.0" promptText="Product ID" />
+        <TextField fx:id="productNameId" layoutX="330.0" layoutY="137.0" promptText="Product name" />
+        <TextField fx:id="descriptionId" layoutX="330.0" layoutY="185.0" promptText="Description" />
+        <TextField fx:id="priceId" layoutX="330.0" layoutY="232.0" promptText="Price" />
+        <TextField fx:id="categoryId" layoutX="330.0" layoutY="283.0" promptText="Category" />
+        <Button layoutX="400.0" layoutY="342.0" mnemonicParsing="false" onAction="#editProduct" text="Create" />
+      <Label layoutX="41.0" layoutY="96.0" text="Which product do you want to edit?" />
+      <Label layoutX="185.0" layoutY="142.0" text="Product name:" />
+      <Label layoutX="202.0" layoutY="190.0" text="Description:" />
+      <Label layoutX="242.0" layoutY="237.0" text="Price:" />
+      <Label layoutX="221.0" layoutY="288.0" text="Category:" />
+      <Label fx:id="endringId" layoutX="106.0" layoutY="347.0" text="Changes has not been saved." />
+    </children>
 </AnchorPane>

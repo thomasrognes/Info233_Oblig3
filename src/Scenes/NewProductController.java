@@ -30,4 +30,6 @@ public class NewProductController {
         productDAO.createNewProduct(product);
 
     }
+
+
 }

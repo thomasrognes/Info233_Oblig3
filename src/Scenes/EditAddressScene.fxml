@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Scenes.EditAddressController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.EditAddressController">
+    <children>
+        <Label layoutX="221.0" layoutY="29.0" prefHeight="27.0" prefWidth="160.0" text="New Address">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="addressId" layoutX="363.0" layoutY="93.0" promptText="Address ID" />
+        <TextField fx:id="streetNumberId" layoutX="363.0" layoutY="139.0" promptText="Street number" />
+        <TextField fx:id="streetNameId" layoutX="363.0" layoutY="185.0" promptText="Street name" />
+        <TextField fx:id="postalCodeId" layoutX="363.0" layoutY="231.0" promptText="Postal code" />
+        <TextField fx:id="postalTownId" layoutX="363.0" layoutY="277.0" promptText="Postal town" />
+        <Button layoutX="412.0" layoutY="339.0" mnemonicParsing="false" onAction="#editAddress" text="Create" />
+      <Label layoutX="72.0" layoutY="98.0" text="Which address ID to you want to edit?" />
+      <Label layoutX="226.0" layoutY="144.0" text="Street number:" />
+      <Label layoutX="241.0" layoutY="190.0" text="Street name:" />
+      <Label layoutX="245.0" layoutY="236.0" text="Postal code:" />
+      <Label layoutX="245.0" layoutY="282.0" text="Postal town:" />
+      <Label fx:id="endringId" layoutX="203.0" layoutY="344.0" text="Changes has not been done." />
+    </children>
 </AnchorPane>

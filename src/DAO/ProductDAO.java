@@ -53,4 +53,21 @@ public class ProductDAO {
             e.printStackTrace();
         }
     }
+
+    public void editProduct(Product product) {
+    String sql = "UPDATE product SET product_name=?, description=?, price=?, category=? WHERE product_id= " + product.getProduct_id();
+
+        try {
+            PreparedStatement prep = conn.prepareStatement(sql);
+            prep.setString(1, product.getProduct_name());
+            prep.setString(2, product.getDescription());
+            prep.setFloat(3, product.getPrice());
+            prep.setInt(4, product.getCategory());
+
+            prep.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+         }
+    }
 }

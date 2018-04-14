@@ -23,11 +23,11 @@
       <Button fx:id="nyProduktKategoriId" layoutX="361.0" layoutY="344.0" mnemonicParsing="false" onAction="#openNewProductCategoryScene" prefHeight="40.0" prefWidth="180.0" text="New product category" />
       <Button fx:id="nyttProduktId" layoutX="364.0" layoutY="288.0" mnemonicParsing="false" onAction="#openNewProductScene" prefHeight="40.0" prefWidth="180.0" text="New product" />
       <Button fx:id="nyFakturaId" layoutX="361.0" layoutY="400.0" mnemonicParsing="false" onAction="#openNewInvoiceScene" prefHeight="40.0" prefWidth="180.0" text="New invoice" />
-      <Button layoutX="682.0" layoutY="181.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Edit customer" />
-      <Button layoutX="682.0" layoutY="236.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Edit address" />
-      <Button layoutX="682.0" layoutY="288.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Edit product" />
-      <Button layoutX="682.0" layoutY="344.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Edit product category" />
-      <Button layoutX="682.0" layoutY="400.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Edit invoice" />
+      <Button fx:id="endreKundeId" layoutX="682.0" layoutY="181.0" mnemonicParsing="false" onAction="#openEditCustomerScene" prefHeight="40.0" prefWidth="180.0" text="Edit customer" />
+      <Button fx:id="endreAdresseId" layoutX="682.0" layoutY="236.0" mnemonicParsing="false" onAction="#openEditAddressScene" prefHeight="40.0" prefWidth="180.0" text="Edit address" />
+      <Button fx:id="endreProduktId" layoutX="682.0" layoutY="288.0" mnemonicParsing="false" onAction="#openEditProductScene" prefHeight="40.0" prefWidth="180.0" text="Edit product" />
+      <Button fx:id="endreProduktKategoriId" layoutX="682.0" layoutY="344.0" mnemonicParsing="false" onAction="#openEditProductCategoryScene" prefHeight="40.0" prefWidth="180.0" text="Edit product category" />
+      <Button fx:id="endreFakturaId" layoutX="682.0" layoutY="400.0" mnemonicParsing="false" onAction="#openEditInvoiceScene" prefHeight="40.0" prefWidth="180.0" text="Edit invoice" />
       <Label layoutX="58.0" layoutY="136.0" text="Deloppgave 1">
          <font>
             <Font name="System Bold" size="18.0" />

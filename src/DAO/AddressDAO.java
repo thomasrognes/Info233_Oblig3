@@ -56,4 +56,23 @@ public class AddressDAO {
             e.printStackTrace();
         }
     }
+
+    public void editAddress(Address address) {
+        String sql = "UPDATE address SET street_number=?, street_name=?, postal_code=?, postal_town=? WHERE address_id= " + address.getAddress_id();
+
+        try{
+            PreparedStatement prep = conn.prepareStatement(sql);
+
+            prep.setString(1,address.getStreet_number());
+            prep.setString(2, address.getStreet_name());
+            prep.setString(3, address.getPostal_code());
+            prep.setString(4, address.getPostal_town());
+
+            prep.executeUpdate();
+
+        } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+    }
 }
+

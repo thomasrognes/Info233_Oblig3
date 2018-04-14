@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Scenes.EditProductCategoryController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.EditProductCategoryController">
+    <children>
+        <Label layoutX="221.0" layoutY="29.0" prefHeight="27.0" prefWidth="160.0" text="New Product Category">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="categoryId" layoutX="349.0" layoutY="92.0" promptText="Category ID" />
+        <TextField fx:id="categoryNameId" layoutX="349.0" layoutY="141.0" promptText="Category name" />
+        <Button layoutX="411.0" layoutY="216.0" mnemonicParsing="false" onAction="#editProductCategory" text="Create" />
+      <Label layoutX="37.0" layoutY="97.0" text="Which category ID do you want to edit?" />
+      <Label layoutX="195.0" layoutY="146.0" text="Category name:" />
+      <Label fx:id="endringId" layoutX="107.0" layoutY="221.0" text="Changes has not been saved." />
+    </children>
 </AnchorPane>

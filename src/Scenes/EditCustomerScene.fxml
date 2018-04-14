@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Scenes.EditCustomerController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.EditCustomerController">
+    <children>
+        <Label layoutX="221.0" layoutY="29.0" prefHeight="27.0" prefWidth="160.0" text="Edit Customer">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="customerId" layoutX="339.0" layoutY="98.0" promptText="Customer ID" />
+        <TextField fx:id="customerNameId" layoutX="339.0" layoutY="141.0" promptText="Customer name" />
+        <TextField fx:id="addressId" layoutX="339.0" layoutY="185.0" promptText="Address" />
+        <TextField fx:id="phoneNumberId" layoutX="339.0" layoutY="232.0" promptText="Phone number" />
+        <TextField fx:id="billingAccountId" layoutX="339.0" layoutY="276.0" promptText="Billing account" />
+        <Button layoutX="394.0" layoutY="345.0" mnemonicParsing="false" onAction="#editCustomer" text="Create" />
+      <Label layoutX="38.0" layoutY="98.0" prefHeight="31.0" prefWidth="285.0" text="Which Customer ID do you want to edit?" />
+      <Label layoutX="192.0" layoutY="146.0" text="Customer name:" />
+      <Label layoutX="247.0" layoutY="190.0" text="Address:" />
+      <Label layoutX="202.0" layoutY="237.0" text="Phone number:" />
+      <Label layoutX="204.0" layoutY="281.0" text="Billing Account" />
+      <Label fx:id="endringId" layoutX="181.0" layoutY="350.0" text="Changes has not been saved." />
+    </children>
 </AnchorPane>

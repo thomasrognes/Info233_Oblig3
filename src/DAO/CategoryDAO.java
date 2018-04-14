@@ -49,4 +49,17 @@ public class CategoryDAO {
             e.printStackTrace();
         }
     }
+
+    public void editProductCategory(Category category) {
+        String sql = "UPDATE category SET category_name=? WHERE category_id= " + category.getCategory_id();
+
+        try {
+            PreparedStatement prep = conn.prepareStatement(sql);
+            prep.setString(1, category.getCategory_name());
+
+            prep.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

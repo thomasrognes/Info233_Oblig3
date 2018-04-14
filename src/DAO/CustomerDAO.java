@@ -52,4 +52,22 @@ public class CustomerDAO {
             e.printStackTrace();
         }
     }
+
+    public void editCustomer(Customer customer)  {
+        String sql = "UPDATE customer SET customer_name=?, address=?, phone_number=?, billing_account=? WHERE customer_id= " + customer.getCustomer_id();
+
+        try{
+            PreparedStatement prep = conn.prepareStatement(sql);
+            prep.setString(1, customer.getCustomer_name());
+            prep.setInt(2, customer.getAddress());
+            prep.setString(3, customer.getPhone_number());
+            prep.setString(4, customer.getBilling_account());
+
+            prep.executeUpdate();
+            System.out.println("Endret.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

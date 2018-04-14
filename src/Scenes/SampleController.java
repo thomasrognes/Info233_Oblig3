@@ -1,6 +1,7 @@
 package Scenes;
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -102,6 +103,82 @@ public class SampleController {
             System.out.println("Error opening the window");
         }
     }
+
+    public void openEditCustomerScene(ActionEvent actionEvent) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/Scenes/EditCustomerScene.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Edit Customer");
+            stage.setScene(new Scene(root, 550, 600));
+            stage.show();
+        } catch (IOException e){
+            e.printStackTrace();
+            System.out.println("Error opening the window");
+        }
+    }
+
+
+    public void openEditAddressScene(ActionEvent actionEvent) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/Scenes/EditAddressScene.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Edit Address");
+            stage.setScene(new Scene(root, 550, 600));
+            stage.show();
+        } catch (IOException e){
+            e.printStackTrace();
+            System.out.println("Error opening the window");
+        }
+    }
+
+
+    public void openEditProductScene(ActionEvent actionEvent) {
+        Parent root;
+        try {
+        root = FXMLLoader.load(getClass().getResource("/Scenes/EditProductScene.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Edit Product");
+        stage.setScene(new Scene(root, 550, 600));
+        stage.show();
+        } catch (IOException e){
+        e.printStackTrace();
+        System.out.println("Error opening the window");
+        }
+    }
+
+    public void openEditProductCategoryScene(ActionEvent actionEvent) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/Scenes/EditProductCategoryScene.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Edit product category");
+            stage.setScene(new Scene(root, 550, 600));
+            stage.show();
+        } catch (IOException e){
+            e.printStackTrace();
+            System.out.println("Error opening the window");
+        }
+    }
+
+
+    public void openEditInvoiceScene(ActionEvent actionEvent) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/Scenes/EditInvoiceScene.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Edit Invoice");
+            stage.setScene(new Scene(root, 550, 600));
+            stage.show();
+        } catch (IOException e){
+            e.printStackTrace();
+            System.out.println("Error opening the window");
+        }
+    }
+
+
+
 }
 
 
