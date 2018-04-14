@@ -104,6 +104,7 @@ public class Main extends Application {
 
     public static void main(String[] args) throws FileNotFoundException, SQLException {
         System.out.println("hello");
+        System.out.println("hallo");
 
         ConnectDB("test.db");
         launch(args);
