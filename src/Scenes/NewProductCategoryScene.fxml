@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.NewProductCategoryController">
+    <children>
+        <Label layoutX="221.0" layoutY="29.0" prefHeight="27.0" prefWidth="160.0" text="New Product Category">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="categoryId" layoutX="207.0" layoutY="93.0" promptText="Category ID" />
+        <TextField fx:id="categoryNameId" layoutX="207.0" layoutY="141.0" promptText="Category name" />
+        <Button layoutX="233.0" layoutY="341.0" mnemonicParsing="false" onAction="#createProductCategory" text="Create" />
+    </children>
+</AnchorPane>
