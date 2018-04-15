@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 package DAO;
 
 import Entities.Customer;
@@ -13,8 +17,12 @@ public class CustomerDAO {
         this.conn = Main.conn;
     }
 
-    //Oppretter en instans av Customer gjennom ID.
-    public Customer createCustomerFromId(int id) throws SQLException{
+    /**
+     * Metode for å opprette en kunde-instans ved å sende inn kunde ID.
+     * @param id på kunden som skal opprettes.
+     * @return Adresse instansen.
+     * @throws SQLException dersom den ikke blir opprettet.
+     */    public Customer createCustomerFromId(int id) throws SQLException{
         Customer currCustomer = new Customer();
 
         try {
@@ -34,7 +42,11 @@ public class CustomerDAO {
         return currCustomer;
     }
 
-    // Oppretter en ny kunde
+    /**
+     * Metode for å opprette en ny kunde i databasen.
+     * @param customer som skal opprettes.
+     * @throws SQLException dersom den ikke går gjennom.
+     */
     public void createNewCustomer (Customer customer) throws SQLException {
         String sql = "INSERT OR IGNORE INTO customer (customer_id, customer_name, address, phone_number, billing_account) VALUES (?,?,?,?,?)";
 
@@ -53,6 +65,10 @@ public class CustomerDAO {
         }
     }
 
+    /**
+     * Metode for å endre på en kunde som allerede ligger i databasen.
+     * @param customer som skal endres.
+     */
     public void editCustomer(Customer customer)  {
         String sql = "UPDATE customer SET customer_name=?, address=?, phone_number=?, billing_account=? WHERE customer_id= " + customer.getCustomer_id();
 

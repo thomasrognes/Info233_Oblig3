@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 package Scenes;
 
 import DAO.InvoiceDAO;
@@ -17,6 +21,10 @@ public class NewInvoiceController {
     public DatePicker dateId;
     public Label endringId;
 
+    /**
+     * Metode for å hente informasjonen fra TekstFeltene i programmet og opprette en instans av informasjonen.
+     * Instansen blir deretter sendt til en metode i DAO klassen som oppretter en ny faktura i databasen.
+     */
     public void createNewInvoice(ActionEvent actionEvent) throws SQLException {
         Invoice invoice = new Invoice();
         InvoiceDAO invoiceDAO = new InvoiceDAO();

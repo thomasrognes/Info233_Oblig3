@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 package Scenes;
 
 import DAO.AddressDAO;
@@ -17,6 +21,12 @@ public class EditCustomerController {
     public TextField billingAccountId;
     public Label endringId;
 
+
+    /**
+     * Metode for å hente informasjonen fra TekstFeltene i programmet og opprette en instans av informasjonen.
+     * Instansen blir deretter sendt til en metode i DAO klassen.
+     *
+     */
     public void editCustomer(ActionEvent actionEvent) {
         Customer customer = new Customer();
         CustomerDAO customerDAO = new CustomerDAO();

@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 package Scenes;
 import DAO.*;
 
@@ -20,7 +24,10 @@ public class NewCustomerController {
 
 
 
-    // Oppretter en ny Customer enhet fra TextField i javafx.
+    /**
+     * Metode for å hente informasjonen fra TekstFeltene i programmet og opprette en instans av informasjonen.
+     * Instansen blir deretter sendt til en metode i DAO klassen som oppretter en ny kunde i databasen.
+     */
     public void createCustomer(ActionEvent actionEvent) throws SQLException {
         Customer customer = new Customer();
         CustomerDAO customerDAO = new CustomerDAO();

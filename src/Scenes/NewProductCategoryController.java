@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 package Scenes;
 
 import DAO.CategoryDAO;
@@ -14,6 +18,10 @@ public class NewProductCategoryController {
     public TextField categoryNameId;
     public Label endringId;
 
+    /**
+     * Metode for å hente informasjonen fra TekstFeltene i programmet og opprette en instans av informasjonen.
+     * Instansen blir deretter sendt til en metode i DAO klassen som oppretter en ny produkt-kategori i databasen.
+     */
     public void createProductCategory(ActionEvent actionEvent) throws SQLException {
         Category category = new Category();
         CategoryDAO categoryDAO = new CategoryDAO();

@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 
 package Scenes;
 
@@ -44,6 +48,11 @@ public class InvoiceController {
     }
 
 
+    /**
+     * Metode for å skrive ut informasjonen til fakturaen som skal vises.
+     * @param id på fakturaen som skal vises.
+     * @throws SQLException dersom ID ikke finnes.
+     */
     public void loadInvoice(int id) throws SQLException {
         float sum = 0;
 
@@ -85,6 +94,7 @@ public class InvoiceController {
                 productList.add(createProductDao);
             }
 
+            //Går igjennom hvert produkt i productList og opprettet Labels for hvert felt.
             for (Product product : productList){
 
                 Label name = new Label();
@@ -96,11 +106,8 @@ public class InvoiceController {
                 Label price = new Label();
                 price.setText(String.valueOf(product.getPrice()));
 
+                // legger til prisen i totalsummen
                 sum += product.getPrice();
-
-                System.out.println(product.getPrice());
-                System.out.println(product.getDescription());
-                System.out.println(product.getProduct_name());
 
                 HBox horrisontalBox = new HBox();
                 horrisontalBox.setStyle("-fx-spacing: 20");
@@ -119,17 +126,28 @@ public class InvoiceController {
         }
     }
 
+    /**
+     * Metode for å fjerne informasjonen i Vboxen.
+     */
     private void resetInvoice() {
         salesBox.getChildren().clear();
     }
 
 
+    /**
+     * Metode for å bla i de forskjellige fakturaene.
+     *
+     */
     public void nextInvoice(ActionEvent actionEvent) throws SQLException {
         currentIndex++;
         resetInvoice();
         loadInvoice(currentIndex);
     }
 
+    /**
+     * Metode for å bla i de forskjellige fakturaene.
+     *
+     */
     public void previousInvoice(ActionEvent actionEvent) throws SQLException {
         if (currentIndex != 1){
             currentIndex--;

@@ -1,3 +1,8 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
+
 package DAO;
 
 import Entities.InvoiceItems;
@@ -17,7 +22,12 @@ public class InvoiceItemsDAO {
     }
 
 
-    //Oppretter en instans av InvoiceItems gjennom ID.
+    /**
+     * Metode for å opprette en faktura gjenstand-instans ved å sende inn addresse ID.
+     * @param id på faktura gjenstanden som skal opprettes.
+     * @return faktura-gjenstanden instansen.
+     * @throws SQLException dersom den ikke blir opprettet.
+     */
     public InvoiceItems createInvoiceItemFromId(int id) {
         InvoiceItems currInvoiceItem = new InvoiceItems();
 
@@ -36,6 +46,11 @@ public class InvoiceItemsDAO {
     }
 
 
+    /**
+     * Metode for å finne produkter gjennom ID.
+     * @param id på produktet
+     * @return produktene.
+     */
     public ArrayList<Integer> findProductsfromId(int id) {
         ArrayList<Integer> products = new ArrayList<Integer>();
 

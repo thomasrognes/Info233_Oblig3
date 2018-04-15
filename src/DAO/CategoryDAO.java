@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 package DAO;
 
 import Entities.Address;
@@ -11,11 +15,17 @@ import java.sql.*;
 public class CategoryDAO {
     private Connection conn;
 
-    public CategoryDAO() {
+    public CategoryDAO()
+    {
         this.conn = Main.conn;
     }
 
-    //Oppretter en instans av Category gjennom ID
+    /**
+     * Metode for å opprette en kategori-instans ved å sende inn kategori ID.
+     * @param id på kategorien som skal opprettes.
+     * @return kategori instansen.
+     * @throws SQLException dersom den ikke blir opprettet.
+     */
     public Category createCategoryFromID(int id) throws SQLException{
         Category currCategory = new Category();
 
@@ -34,6 +44,11 @@ public class CategoryDAO {
     }
 
 
+    /**
+     * Metode for å opprette en ny kategori i databasen.
+     * @param category som skal opprettes.
+     * @throws SQLException dersom den ikke går gjennom.
+     */
     public void createNewCategory (Category category) throws SQLException {
         String sql = "INSERT OR IGNORE INTO category (category_id, category_name) VALUES (?,?)";
 
@@ -50,6 +65,10 @@ public class CategoryDAO {
         }
     }
 
+    /**
+     * Metode for å endre på en kategori som allerede ligger i databasen.
+     * @param category som skal endres.
+     */
     public void editProductCategory(Category category) {
         String sql = "UPDATE category SET category_name=? WHERE category_id= " + category.getCategory_id();
 

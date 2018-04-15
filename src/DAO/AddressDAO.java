@@ -1,3 +1,8 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
+
 package DAO;
 
 import Entities.Address;
@@ -15,7 +20,12 @@ public class AddressDAO {
         this.conn = Main.conn;
     }
 
-    //Oppretter en instans av Address gjennom ID
+    /**
+     * Metode for å opprette en adresse-instans ved å sende inn addresse ID.
+     * @param id på adressen som skal opprettes.
+     * @return Adresse instansen.
+     * @throws SQLException dersom den ikke blir opprettet.
+     */
     public Address createAddressFromId(int id) throws SQLException{
         Address currAddress = new Address();
 
@@ -36,7 +46,11 @@ public class AddressDAO {
         return currAddress;
     }
 
-    // Oppretter en ny kunde
+    /**
+     * Metode for å opprette en ny adresse i databasen.
+     * @param address som skal opprettes.
+     * @throws SQLException dersom den ikke går gjennom.
+     */
     public void createNewAddress (Address address) throws SQLException {
         String sql = "INSERT OR IGNORE INTO address (address_id, street_number, street_name, postal_code, postal_town) VALUES (?,?,?,?,?)";
 
@@ -57,6 +71,10 @@ public class AddressDAO {
         }
     }
 
+    /**
+     * Metode for å endre på en adresse som allerede ligger i databasen.
+     * @param address som skal endres.
+     */
     public void editAddress(Address address) {
         String sql = "UPDATE address SET street_number=?, street_name=?, postal_code=?, postal_town=? WHERE address_id= " + address.getAddress_id();
 

@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 package DAO;
 
 
@@ -14,7 +18,12 @@ public class InvoiceDAO {
         this.conn = Main.conn;
     }
 
-    //Oppretter en instans av Invoice gjennom ID
+    /**
+     * Metode for å opprette en faktura-instans ved å sende inn faktura ID.
+     * @param id på fakturaen som skal opprettes.
+     * @return faktura instansen.
+     * @throws SQLException dersom den ikke blir opprettet.
+     */
     public Invoice createInvoiceFromId(int id) throws SQLException {
         Invoice currInvoice = new Invoice();
 
@@ -34,6 +43,11 @@ public class InvoiceDAO {
     }
 
 
+    /**
+     * Metode for å opprette en ny faktura i databasen.
+     * @param invoice som skal opprettes.
+     * @throws SQLException dersom den ikke går gjennom.
+     */
     public void createNewInvoice (Invoice invoice) throws SQLException {
         String sql = "INSERT OR IGNORE INTO invoice (invoice_id, customer, dato) VALUES (?,?,?)";
 
@@ -51,6 +65,10 @@ public class InvoiceDAO {
         }
     }
 
+    /**
+     * Metode for å endre på en kunde som allerede ligger i databasen.
+     * @param invoice som skal endres.
+     */
     public void editInvoice (Invoice invoice) {
         String sql = "UPDATE invoice SET invoice_id = ?, customer = ?, dato = ? WHERE invoice_id=" + invoice.getInvoice_id();
 

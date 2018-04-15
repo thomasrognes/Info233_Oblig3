@@ -1,3 +1,8 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
+
 package DAO;
 
 import Entities.Product;
@@ -12,7 +17,12 @@ public class ProductDAO {
         conn = Main.conn;
     }
 
-    // Oppretter en instans av Product gjennom ID
+    /**
+     * Metode for å opprette et produkt-instans ved å sende inn produkt ID.
+     * @param id på produktet som skal opprettes.
+     * @return Produkt instansen.
+     * @throws SQLException dersom den ikke blir opprettet.
+     */
     public Product createProductFromId(int id) throws SQLException {
         Product currProduct = new Product();
 
@@ -34,6 +44,11 @@ public class ProductDAO {
         return currProduct;
     }
 
+    /**
+     * Metode for å opprette et nytt produkt i databasen.
+     * @param product som skal opprettes.
+     * @throws SQLException dersom den ikke går gjennom.
+     */
     public void createNewProduct (Product product) throws SQLException {
         String sql = "INSERT OR IGNORE INTO product (product_id, product_name, description, price, category) VALUES (?,?,?,?,?)";
 
@@ -54,6 +69,10 @@ public class ProductDAO {
         }
     }
 
+    /**
+     * Metode for å endre på et produkt som allerede ligger i databasen.
+     * @param product som skal endres.
+     */
     public void editProduct(Product product) {
     String sql = "UPDATE product SET product_name=?, description=?, price=?, category=? WHERE product_id= " + product.getProduct_id();
 

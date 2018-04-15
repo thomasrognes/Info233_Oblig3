@@ -1,3 +1,7 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
 package Scenes;
 
 
@@ -14,7 +18,9 @@ import java.io.IOException;
 
 public class SampleController {
 
-    // Åpner Faktura vincuet.
+    /**
+     * Metode som åpner vinduet som viser en faktura.
+     */
     public void openInvoiceScene(javafx.event.ActionEvent actionEvent) {
         Parent root;
         try {
@@ -29,7 +35,9 @@ public class SampleController {
         }
     }
 
-    // Åpner vinduet som gir deg muligheten til å opprette en ny kunde.
+    /**
+     * Metode som åpner vinduet der man kan opprette en ny kunde.
+     */
     public void openNewCustomerScene(javafx.event.ActionEvent actionEvent) {
         Parent root;
         try {
@@ -44,7 +52,9 @@ public class SampleController {
         }
     }
 
-    // Åpner vinduet som gir deg muligheten til å opprette en ny kunde.
+    /**
+     * Metode som åpner vinduet der man kan opprette en ny adresse.
+     */
     public void openNewAddressScene(javafx.event.ActionEvent actionEvent) {
         Parent root;
         try {
@@ -59,7 +69,9 @@ public class SampleController {
         }
     }
 
-    // Åpner vinduet som gir deg muligheten til å opprette en ny produkt kategori.
+    /**
+     * Metode som åpner vinduet der man kan opprette en ny produkt-kategori.
+     */
     public void openNewProductCategoryScene(javafx.event.ActionEvent actionEvent) {
         Parent root;
         try {
@@ -74,7 +86,9 @@ public class SampleController {
         }
     }
 
-    // Åpner vinduet som gir deg muligheten til å opprette et nytt produkt.
+    /**
+     * Metode som åpner vinduet der man kan opprette et nytt produkt.
+     */
     public void openNewProductScene(javafx.event.ActionEvent actionEvent) {
         Parent root;
         try {
@@ -89,7 +103,9 @@ public class SampleController {
         }
     }
 
-    // Åpner vinduet som gir deg muligheten til å opprette en ny faktura.
+    /**
+     * Metode som åpner vinduet der man kan opprette en ny faktura.
+     */
     public void openNewInvoiceScene(javafx.event.ActionEvent actionEvent) {
         Parent root;
         try {
@@ -104,6 +120,10 @@ public class SampleController {
         }
     }
 
+
+    /**
+     * Metode som åpner vinduet der man kan endre på en kunde.
+     */
     public void openEditCustomerScene(ActionEvent actionEvent) {
         Parent root;
         try {
@@ -119,6 +139,9 @@ public class SampleController {
     }
 
 
+    /**
+     * Metode som åpner vinduet der man kan endre på en adresse.
+     */
     public void openEditAddressScene(ActionEvent actionEvent) {
         Parent root;
         try {
@@ -133,7 +156,9 @@ public class SampleController {
         }
     }
 
-
+    /**
+     * Metode som åpner vinduet der man kan endre på et produkt.
+     */
     public void openEditProductScene(ActionEvent actionEvent) {
         Parent root;
         try {
@@ -148,6 +173,9 @@ public class SampleController {
         }
     }
 
+    /**
+     * Metode som åpner vinduet der man kan endre på en produkt-kategori
+     */
     public void openEditProductCategoryScene(ActionEvent actionEvent) {
         Parent root;
         try {
@@ -163,6 +191,9 @@ public class SampleController {
     }
 
 
+    /**
+     * Metode som åpner vinduet der man kan endre på en faktura.
+     */
     public void openEditInvoiceScene(ActionEvent actionEvent) {
         Parent root;
         try {
@@ -176,9 +207,6 @@ public class SampleController {
             System.out.println("Error opening the window");
         }
     }
-
-
-
 }
 
 

@@ -1,3 +1,8 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
+
 package Sample;
 
 import javafx.application.Application;
@@ -21,15 +26,15 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/Scenes/sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Obligatorisk Oppgave 3 - Thomas Sebastian Rognes (rut005)");
         primaryStage.setScene(new Scene(root, 1000, 500));
         primaryStage.show();
     }
 
     /**
-     * @param file
-     * @throws SQLException
-     * @throws FileNotFoundException
+     * @param file som skal tilkobles.
+     * @throws SQLException dersom den ikke blir koblet til.
+     * @throws FileNotFoundException dersom den ikke blir koblet til.
      */
 
     public static void ConnectDB(String file) throws SQLException, FileNotFoundException {
@@ -51,10 +56,10 @@ public class Main extends Application {
     }
 
     /**
-     * Metode for å importere den vedlagte SQL fila.
-     * @param conn connection
-     * @param in inputstream
-     * @throws SQLException
+     * Metode for å importere den vedlagte SQL filen.
+     * @param conn connection til databasen
+     * @param in inputstream SQL filen som skal legges til.
+     * @throws SQLException dersom den ikke blir lagt til.
      */
     public static void importSQL(Connection conn, InputStream in) throws SQLException {
 
@@ -83,7 +88,10 @@ public class Main extends Application {
         }
     }
 
-    // Metode for å sjekke om SQL fila allerede er inn.
+    /**
+     * Metode for å sjekke om den vedlagte SQL fila allerede er bltt lagt inn.
+     * @return true hvis den allerede er lagt inn, false hvis ikke.
+     */
     public static boolean checkSQL(){
         boolean isDriven = false;
         try {
@@ -102,10 +110,11 @@ public class Main extends Application {
         return isDriven;
     }
 
-    public static void main(String[] args) throws FileNotFoundException, SQLException {
-        System.out.println("hello");
-        System.out.println("hallo");
 
+    /**
+     *Main metode som oppretter en tilkobling til Databasen, og lukker tilkoblingen når programmet blir avsluttet.
+     */
+    public static void main(String[] args) throws FileNotFoundException, SQLException {
         ConnectDB("test.db");
         launch(args);
         conn.close();

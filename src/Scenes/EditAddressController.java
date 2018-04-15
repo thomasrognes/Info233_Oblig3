@@ -1,3 +1,8 @@
+/**
+ *  Obligatorisk oppgave 3 for Thomas Sebastian Rognes (Rut005)
+ */
+
+
 package Scenes;
 
 import DAO.AddressDAO;
@@ -16,6 +21,11 @@ public class EditAddressController {
     public TextField postalTownId;
     public Label endringId;
 
+    /**
+     * Metode for å hente informasjonen fra TekstFeltene i programmet og opprette en instans av informasjonen.
+     * Instansen blir deretter sendt til en metode i DAO klassen.
+     *
+     */
     public void editAddress(ActionEvent actionEvent) {
         Address address = new Address();
         AddressDAO addressDAO = new AddressDAO();
