@@ -6,10 +6,8 @@
 package DAO;
 
 import Entities.Address;
-import Entities.Customer;
-import Sample.Main;
+import Scenes.Main;
 
-import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 
 public class AddressDAO {

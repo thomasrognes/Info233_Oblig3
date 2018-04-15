@@ -6,7 +6,7 @@
 package DAO;
 
 import Entities.Product;
-import Sample.Main;
+import Scenes.Main;
 
 import java.sql.*;
 

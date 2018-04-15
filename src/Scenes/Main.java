@@ -3,7 +3,7 @@
  */
 
 
-package Sample;
+package Scenes;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -115,7 +115,7 @@ public class Main extends Application {
      *Main metode som oppretter en tilkobling til Databasen, og lukker tilkoblingen når programmet blir avsluttet.
      */
     public static void main(String[] args) throws FileNotFoundException, SQLException {
-        ConnectDB("test.db");
+        ConnectDB("faktura.db");
         launch(args);
         conn.close();
         System.out.println("Connection is closed.");

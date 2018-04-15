@@ -7,16 +7,13 @@ package Scenes;
 
 import DAO.*;
 import Entities.*;
-import Sample.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Struct;
 import java.util.*;
 
 import javafx.scene.control.Label;

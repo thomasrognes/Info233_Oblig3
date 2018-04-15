@@ -4,12 +4,9 @@
 
 package DAO;
 
-import Entities.Address;
 import Entities.Category;
-import Sample.Main;
+import Scenes.Main;
 
-import javax.swing.plaf.nimbus.State;
-import javax.xml.transform.Result;
 import java.sql.*;
 
 public class CategoryDAO {

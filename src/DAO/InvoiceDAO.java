@@ -6,8 +6,7 @@ package DAO;
 
 
 import Entities.Invoice;
-import Sample.Main;
-import Sample.Main;
+import Scenes.Main;
 
 import java.sql.*;
 
