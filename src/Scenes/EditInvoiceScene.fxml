@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Scenes.EditInvoiceController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.EditInvoiceController">
+    <children>
+        <Label layoutX="221.0" layoutY="29.0" prefHeight="27.0" prefWidth="160.0" text="Edit Invoice">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="invoiceId" layoutX="300.0" layoutY="96.0" promptText="Invoice ID" />
+        <TextField fx:id="customerId" layoutX="300.0" layoutY="146.0" promptText="Customer ID" />
+        <Button layoutX="350.0" layoutY="310.0" mnemonicParsing="false" onAction="#editInvoice" text="Create" />
+      <DatePicker fx:id="datoId" layoutX="285.0" layoutY="200.0" />
+      <Label layoutX="20.0" layoutY="101.0" text="Which Invoice ID do you want to edit?" />
+      <Label layoutX="189.0" layoutY="151.0" text="Customer ID" />
+      <Label layoutX="237.0" layoutY="205.0" text="Date:" />
+      <Label fx:id="endringId" layoutX="141.0" layoutY="315.0" text="Changes has not been saved." />
+    </children>
 </AnchorPane>

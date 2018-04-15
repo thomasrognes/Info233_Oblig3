@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.NewAddressController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.NewAddressController">
     <children>
         <Label layoutX="221.0" layoutY="29.0" prefHeight="27.0" prefWidth="160.0" text="New Address">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="addressId" layoutX="207.0" layoutY="93.0" promptText="Address ID" />
-        <TextField fx:id="streetNumberId" layoutX="207.0" layoutY="141.0" promptText="Street number" />
-        <TextField fx:id="streetNameId" layoutX="207.0" layoutY="185.0" promptText="Street name" />
-        <TextField fx:id="postalCodeId" layoutX="207.0" layoutY="238.0" promptText="Postal code" />
-        <TextField fx:id="postalTownId" layoutX="207.0" layoutY="291.0" promptText="Postal town" />
-        <Button layoutX="233.0" layoutY="341.0" mnemonicParsing="false" onAction="#createAddress" text="Create" />
+        <TextField fx:id="addressId" layoutX="310.0" layoutY="93.0" promptText="Address ID" />
+        <TextField fx:id="streetNumberId" layoutX="310.0" layoutY="140.0" promptText="Street number" />
+        <TextField fx:id="streetNameId" layoutX="310.0" layoutY="185.0" promptText="Street name" />
+        <TextField fx:id="postalCodeId" layoutX="310.0" layoutY="235.0" promptText="Postal code" />
+        <TextField fx:id="postalTownId" layoutX="310.0" layoutY="290.0" promptText="Postal town" />
+        <Button layoutX="350.0" layoutY="337.0" mnemonicParsing="false" onAction="#createAddress" text="Create" />
+      <Label layoutX="171.0" layoutY="98.0" text="Address ID:" />
+      <Label layoutX="149.0" layoutY="145.0" text="Street number:" />
+      <Label layoutX="166.0" layoutY="190.0" text="Street name:" />
+      <Label layoutX="168.0" layoutY="240.0" text="Postal code:" />
+      <Label layoutX="167.0" layoutY="295.0" text="Postal town:" />
+      <Label fx:id="endringId" layoutX="75.0" layoutY="342.0" text="The address has not been saved." />
     </children>
 </AnchorPane>

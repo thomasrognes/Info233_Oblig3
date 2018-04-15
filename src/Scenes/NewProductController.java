@@ -3,6 +3,7 @@ package Scenes;
 import DAO.ProductDAO;
 import Entities.Product;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.sql.SQLException;
@@ -15,6 +16,7 @@ public class NewProductController {
     public TextField descriptionId;
     public TextField priceId;
     public TextField categoryId;
+    public Label endringId;
 
     // Oppretter et nytt produkt i databasen.
     public void createProduct(ActionEvent actionEvent) throws SQLException {
@@ -28,6 +30,7 @@ public class NewProductController {
         product.setCategory(Integer.parseInt(categoryId.getText()));
 
         productDAO.createNewProduct(product);
+        endringId.setText("The product has been saved!");
 
     }
 

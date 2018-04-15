@@ -39,11 +39,28 @@ public class InvoiceDAO {
 
         try{
             PreparedStatement prep = conn.prepareStatement(sql);
-            prep.setInt(1, invoice.getCustomer());
-            prep.setInt(2,invoice.getInvoice_id());
+            prep.setInt(1,invoice.getInvoice_id());
+            prep.setInt(2, invoice.getCustomer());
             prep.setString(3, invoice.getDato());
+
             prep.executeUpdate();
             System.out.println("Lagt til i database!");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void editInvoice (Invoice invoice) {
+        String sql = "UPDATE invoice SET invoice_id = ?, customer = ?, dato = ? WHERE invoice_id=" + invoice.getInvoice_id();
+
+        try {
+            PreparedStatement prep = conn.prepareStatement(sql);
+            prep.setInt(1, invoice.getInvoice_id());
+            prep.setInt(2, invoice.getCustomer());
+            prep.setString(3, invoice.getDato());
+
+            prep.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();

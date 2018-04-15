@@ -21,7 +21,7 @@ public class SampleController {
             root = FXMLLoader.load(getClass().getResource("/Scenes/InvoiceScene.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Faktura");
-            stage.setScene(new Scene(root, 550, 600));
+            stage.setScene(new Scene(root, 750, 600));
             stage.show();
         } catch (IOException e){
             e.printStackTrace();

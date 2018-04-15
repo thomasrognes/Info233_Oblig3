@@ -4,6 +4,7 @@ import DAO.*;
 import Entities.Address;
 import Entities.Customer;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.sql.SQLException;
@@ -15,6 +16,7 @@ public class NewCustomerController {
     public TextField addressId;
     public TextField phoneNumberId;
     public TextField billingAccountId;
+    public Label endringId;
 
 
 
@@ -30,5 +32,6 @@ public class NewCustomerController {
         customer.setBilling_account(billingAccountId.getText());
 
         customerDAO.createNewCustomer(customer);
+        endringId.setText("The customer has been saved!");
     }
 }

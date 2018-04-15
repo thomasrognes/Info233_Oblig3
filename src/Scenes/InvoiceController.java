@@ -109,6 +109,9 @@ public class InvoiceController {
                 horrisontalBox.getChildren().add(description);
                 horrisontalBox.getChildren().add(price);
 
+                name.setPrefWidth(280);
+                description.setPrefWidth(150);
+
                 salesBox.getChildren().add(horrisontalBox);
                 salesBox.setStyle("-fx-spacing: 10");
             }
